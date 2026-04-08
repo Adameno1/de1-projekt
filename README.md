@@ -17,7 +17,7 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - porovnaním s prednastaveným kódom
 - vizuálnou indikáciou úspechu/neúspechu
 - výstupom na sedemsegmentový displej
-- 
+
 # Tabulka vstupov a výstupov
 
 | Signál    |    Typ | Šírka | Funkcia                 |
