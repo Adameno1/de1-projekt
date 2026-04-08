@@ -7,7 +7,7 @@ Každá číslica je potvrdená stlačením tlačidla a uložená do interných 
 Po zadaní všetkých štyroch číslic sa uložený kód porovná s prednastavenou kombináciou.  
 Výsledok je indikovaný pomocou LED diód a zadaný kód je zobrazený na sedemsegmentovom displeji.
 
-# Cieľová doska
+# Doska
 Nexys A7-50T
 
 # Cieľ projektu
