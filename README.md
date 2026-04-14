@@ -50,7 +50,9 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 # Git workflow
 Repozitár bude priebežne aktualizovaný počas každého cvičenia.
 1. Cvičenie :
-   - Počas prvého cvičenia sme spravili základ pre tvorenie nášho projektu, rozdelili si úlohy, spravili blokovú schému zapojenia a pridali do repozitára bin2seg, clk_en, debounce, display_driver a nexys.xdc
+   - Počas prvého cvičenia sme spravili základ pre tvorenie nášho projektu, rozdelili si úlohy.
+   - Spravili blokovú schému zapojenia
+   - Pridali do repozitára bin2seg, clk_en, debounce, display_driver a nexys.xdc
 2. Cvičenie :
 
 3. Cvičenie :
