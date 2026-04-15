@@ -17,6 +17,33 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - porovnaním s prednastaveným kódom
 - vizuálnou indikáciou úspechu/neúspechu
 - výstupom na sedemsegmentový displej
+# Bloková schéma
+<img width="460" height="480" alt="image" src="https://github.com/user-attachments/assets/692d85e2-f509-4e5f-802a-b6036dda4241" />
+
+
+- OK  -> LED0
+- ERR -> LED1
+
+- Správanie systému
+
+- Po resete:
+
+- systém vymaže všetky 4 pozície
+- index zadávania sa nastaví na prvú číslicu
+- LED OK a ERROR zhasnú
+
+- Po stlačení BTNC:
+
+- aktuálna hodnota SW3..0 sa uloží do ďalšej pozície
+- index sa posunie na ďalšiu číslicu
+- keď sú uložené všetky 4 číslice, ďalšie zadávanie sa ignoruje alebo čaká na compare
+
+- Po stlačení BTNR:
+
+- uložené 4 číslice sa porovnajú s tajným kódom
+- ak sa zhodujú, rozsvieti sa LED0
+- ak sa nezhodujú, rozsvieti sa LED1
+
 
 # Tabulka vstupov a výstupov
 
