@@ -81,7 +81,9 @@ Repozitár bude priebežne aktualizovaný počas každého cvičenia.
    - Začali dávať dokopy blokovú schému a celkovú predstavu toho ako bude fungovať náš projekt
    - Pridali do repozitára bin2seg, clk_en, debounce, display_driver a nexys.xdc
 2. Cvičenie :
-
+   - Počas tohto cvičenia sme dokončili schému zapojenia
+   - spravili sme design sources pre code_compare, digit_register a safe_fsm
+   - Posledným krokom ktorý sme spravili bolo, že sme vygenerovali ku každému design sources testbench ktorý sme následne upravili podľa potrieb 
 3. Cvičenie :
    
 4. Cvičenie :
