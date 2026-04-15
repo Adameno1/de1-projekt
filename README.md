@@ -43,21 +43,9 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - clk_en
 
 # Rozdelenie úloh v tíme
-Petrik – vstupy a riadenie
-debouncer
-clk_en
-obsluha tlačidiel
-časť safe_fsm
-Gazovic – dátová časť
-digit_registers
-code_compare
-definícia preset kódu
-testbench pre porovnanie
-Huspenina – výstupy a integrácia
-bin2seg
-display_driver
-LED signalizácia
-top-level prepájanie a .xdc
+Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
+Gazovic – dátová časť, digit_registers, code_compare, definícia preset kódu, testbench pre porovnanie
+Huspenina – výstupy a integrácia, LED signalizácia, top-level prepájanie a .xdc
 
 # Git workflow
 Repozitár bude priebežne aktualizovaný počas každého cvičenia.
