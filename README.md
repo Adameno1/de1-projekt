@@ -51,7 +51,7 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 Repozitár bude priebežne aktualizovaný počas každého cvičenia.
 1. Cvičenie :
    - Počas prvého cvičenia sme spravili základ pre tvorenie nášho projektu, rozdelili si úlohy
-   - Spravili blokovú schému zapojenia
+   - Začali dávať dokopy blokovú schému a celkovú predstavu toho ako bude fungovať náš projekt
    - Pridali do repozitára bin2seg, clk_en, debounce, display_driver a nexys.xdc
 2. Cvičenie :
 
