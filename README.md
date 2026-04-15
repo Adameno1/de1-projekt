@@ -7,7 +7,7 @@ Každá číslica je potvrdená stlačením tlačidla a uložená do interných 
 Po zadaní všetkých štyroch číslic sa uložený kód porovná s prednastavenou kombináciou.  
 Výsledok je indikovaný pomocou LED diód a zadaný kód je zobrazený na sedemsegmentovom displeji.
 
-# Cieľová doska
+# Doska
 Nexys A7-50T
 
 # Cieľ projektu
@@ -43,10 +43,20 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - clk_en
 
 # Rozdelenie úloh v tíme
-- Petrík: spracovanie tlačidiel, debounce, FSM
-- Gažovič: registre číslic, komparátor, simulácia
-- Huspenina: ovládač displeja, výstup na seven-segment, top integrácia, XDC
+- Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
+- Gazovic – dátová časť, digit_registers, code_compare, definícia preset kódu, testbench pre porovnanie
+- Huspenina – výstupy a integrácia, LED signalizácia, top-level prepájanie a .xdc
 
 # Git workflow
 Repozitár bude priebežne aktualizovaný počas každého cvičenia.
-Každý člen tímu je zodpovedný za vlastné commity vo svojej časti projektu.
+1. Cvičenie :
+   - Počas prvého cvičenia sme spravili základ pre tvorenie nášho projektu, rozdelili si úlohy
+   - Začali dávať dokopy blokovú schému a celkovú predstavu toho ako bude fungovať náš projekt
+   - Pridali do repozitára bin2seg, clk_en, debounce, display_driver a nexys.xdc
+2. Cvičenie :
+
+3. Cvičenie :
+   
+4. Cvičenie :
+
+5. Cvičenie :
