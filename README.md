@@ -17,8 +17,10 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - porovnaním s prednastaveným kódom
 - vizuálnou indikáciou úspechu/neúspechu
 - výstupom na sedemsegmentový displej
+
 # Bloková schéma
-<img width="907" height="611" alt="image" src="https://github.com/user-attachments/assets/c94360c1-7869-4508-9ed0-1f746b407192" />
+
+<img width="881" height="584" alt="image" src="https://github.com/user-attachments/assets/7c73a2f2-a810-4391-921a-31bd17697b41" />
 
 - OK  -> LED0
 - ERR -> LED1
