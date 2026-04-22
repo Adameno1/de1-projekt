@@ -1,17 +1,19 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-----------------------------------------------
+use IEEE.NUMERIC_STD.ALL;
+
 entity display_driver is
-    Port ( clk   : in  STD_LOGIC;
-           rst   : in  STD_LOGIC;
-           data  : in  STD_LOGIC_VECTOR(7 downto 0);
-           seg   : out STD_LOGIC_VECTOR(6 downto 0);
-           anode : out STD_LOGIC_VECTOR(1 downto 0));
+    Port (
+        clk   : in  STD_LOGIC;
+        rst   : in  STD_LOGIC;
+        data  : in  STD_LOGIC_VECTOR(15 downto 0);
+        seg   : out STD_LOGIC_VECTOR(6 downto 0);
+        anode : out STD_LOGIC_VECTOR(7 downto 0)
+    );
 end display_driver;
-----------------------------------------------
+
 architecture Behavioral of display_driver is
 
-    -- Component declaration for clock enable
     component clk_en is
         generic ( G_MAX : positive );
         port (
@@ -19,87 +21,90 @@ architecture Behavioral of display_driver is
             rst : in  std_logic;
             ce  : out std_logic
         );
-    end component clk_en;
- 
-    -- Component declaration for binary counter
-    component counter is
-        generic ( G_BITS : positive );
-        port (
-            clk : in  std_logic;
-            rst : in  std_logic;
-            en  : in  std_logic;
-            cnt : out std_logic_vector(G_BITS - 1 downto 0)
-        );
-    end component counter;
- 
-    -- Component declaration for bin2seg
+    end component;
+
     component bin2seg is
         port (
-            bin : in  std_logic_vector(3 downto 0);  --! 4-bit hexadecimal input
-            seg : out std_logic_vector(6 downto 0)   --! {a,b,c,d,e,f,g} active-low outputs
+            bin : in  std_logic_vector(3 downto 0);
+            seg : out std_logic_vector(6 downto 0)
         );
-    end component bin2seg;
- 
-    -- Internal signals
-    signal sig_en    : std_logic;
-    -- TODO: Add needed signals
-    signal sig_digit : std_logic;
-    signal sig_bin   : std_logic_vector(3 downto 0);
+    end component;
+
+    signal sig_en      : std_logic;
+    signal sig_digit   : unsigned(1 downto 0) := (others => '0');
+    signal sig_bin     : std_logic_vector(3 downto 0);
 
 begin
 
-    ------------------------------------------------------------------------
-    -- Clock enable generator for refresh timing
-    ------------------------------------------------------------------------
-    clock_0 : component clk_en
-        generic map ( G_MAX => 800_000 )  -- Adjust for flicker-free multiplexing
-        port map (                   -- For simulation: 16
-            clk => clk,              -- For implementation: 1_600_000
+    clock_0 : clk_en
+        generic map (
+            G_MAX => 80000
+        )
+        port map (
+            clk => clk,
             rst => rst,
             ce  => sig_en
         );
 
-    ------------------------------------------------------------------------
-    -- N-bit counter for digit selection
-    ------------------------------------------------------------------------
-    counter_0 : component counter
-        generic map ( G_BITS => 1 )
-        port map (
-            clk    => clk,
-            rst    => rst,
-            en     => sig_en,
-            cnt(0) => sig_digit  -- std_logic_vector => std_logic
-        );                       -- cnt(0) only for 1-bit counter
+    -- interný 2-bit counter, už netreba samostatný counter.vhd
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                sig_digit <= (others => '0');
+            elsif sig_en = '1' then
+                sig_digit <= sig_digit + 1;
+            end if;
+        end if;
+    end process;
 
-    ------------------------------------------------------------------------
-    -- Digit select
-    ------------------------------------------------------------------------
-    sig_bin <= data(3 downto 0) when sig_digit = '0' else -- TODO: Complete the multiplexor
-               data(7 downto 4);
+    with std_logic_vector(sig_digit) select
+        sig_bin <= data(3 downto 0)    when "00",
+                   data(7 downto 4)    when "01",
+                   data(11 downto 8)   when "10",
+                   data(15 downto 12)  when "11",
+                   "0000"              when others;
 
-    ------------------------------------------------------------------------
-    -- 7-segment decoder
-    ------------------------------------------------------------------------
-    decoder_0 : component bin2seg
+    decoder_0 : bin2seg
         port map (
-            -- TODO: Complete the instantiation of `bin2seg`
             bin => sig_bin,
             seg => seg
         );
 
-    ------------------------------------------------------------------------
-    -- Anode select process
-    ------------------------------------------------------------------------
-    p_anode_select : process (sig_digit) is
+    process(sig_digit)
+    begin
+        case std_logic_vector(sig_digit) is
+            when "00" =>
+                anode <= "11111110";
+            when "01" =>
+                anode <= "11111101";
+            when "10" =>
+                anode <= "11111011";
+            when "11" =>
+                anode <= "11110111";
+            when others =>
+                anode <= "11111111";
+        end case;
+    end process;
+
+end Behavioral;
+            bin => sig_bin,
+            seg => seg
+        );
+
+    process(sig_digit)
     begin
         case sig_digit is
-            when '0' =>
-                anode <= b"10";  -- Right digit
-            -- TODO: Complete the anode selection
-            when '1' =>
-                anode <= b"01";  -- Right digit
+            when "00" =>
+                anode <= "11111110";
+            when "01" =>
+                anode <= "11111101";
+            when "10" =>
+                anode <= "11111011";
+            when "11" =>
+                anode <= "11110111";
             when others =>
-                anode <= b"11";  -- Do not select anything
+                anode <= "11111111";
         end case;
     end process;
 
