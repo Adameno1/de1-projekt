@@ -45,6 +45,9 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - ak sa zhodujú, rozsvieti sa LED0
 - ak sa nezhodujú, rozsvieti sa LED1
 
+# Simulacia
+<img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
+
 
 # Tabulka vstupov a výstupov
 
