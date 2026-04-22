@@ -20,7 +20,7 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 
 # Bloková schéma
 
-<img width="881" height="584" alt="image" src="https://github.com/user-attachments/assets/7c73a2f2-a810-4391-921a-31bd17697b41" />
+<img width="1203" height="464" alt="image" src="https://github.com/user-attachments/assets/40fd6e9b-adf6-498d-9d02-fb088231f40b" />
 
 - OK  -> LED0
 - ERR -> LED1
