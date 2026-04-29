@@ -49,8 +49,10 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - safe_fsm
 <img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
 
-- digit_registers 
+# digit_registers
+ 
 <img width="1114" height="471" alt="image" src="https://github.com/user-attachments/assets/d6eabe81-1501-49f3-9abe-ed933c85d713" />
+
 Táto simulácia ukazuje, ako funguje modul `digit_registers`.
 
 Na začiatku sa vykoná reset, takže všetky registre (`d0`, `d1`, `d2`, `d3`) sú nastavené na hodnotu `0`.
