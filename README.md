@@ -90,6 +90,39 @@ Výsledkom je uložené číslo **2580**.
 
 Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
+# code_compare 
+
+<img width="1108" height="465" alt="image" src="https://github.com/user-attachments/assets/d641ba31-aa9c-4ead-835b-9167c1ac0c1d" />
+
+Táto simulácia ukazuje, ako funguje modul `code_compare`, ktorý porovnáva zadaný kód s uloženým správnym kódom.
+
+Na začiatku je reset, takže výstupy `code_ok` a `code_err` sú nastavené na `0`.
+
+Potom sa najprv nastaví správny kód:
+- `d0 = 2`
+- `d1 = 5`
+- `d2 = 8`
+- `d3 = 0`
+
+Pri pulze `compare_en = 1`:
+- modul vykoná porovnanie
+- keďže kód je správny, nastaví sa:
+  - `code_ok = 1`
+  - `code_err = 0`
+
+Táto hodnota zostane uložená, kým nepríde ďalšie porovnanie alebo reset.
+
+Následne sa zmení jedna číslica (`d2 = 9`), čím vznikne nesprávny kód **2590**.
+
+Pri ďalšom pulze `compare_en = 1`:
+- modul opäť vykoná porovnanie
+- tentokrát je kód nesprávny, takže:
+  - `code_ok = 0`
+  - `code_err = 1`
+
+Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy späť na `0`.
+
+
 # Tabulka vstupov a výstupov
 
 | Signál    |    Typ | Šírka | Funkcia                 |
