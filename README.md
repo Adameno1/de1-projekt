@@ -46,8 +46,27 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - ak sa nezhodujú, rozsvieti sa LED1
 
 # Simulacia
-- safe_fsm
+# safe_fsm
+
 <img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
+
+Táto simulácia ukazuje, ako funguje riadiaci modul `safe_fsm`.
+
+Na začiatku je reset, takže všetky výstupy sú v nulovom stave a `digit_index` je nastavený na `0`.
+
+Počas simulácie sa generujú pulzy na vstupoch `btn_store` a `btn_compare`, ktoré simulujú stláčanie tlačidiel.
+
+Pri každom pulze `btn_store = 1`:
+- sa aktivuje `store_en`
+- `digit_index` sa zvýši o 1 (0 → 1 → 2 → 3)
+
+To znamená, že sa postupne vyberajú pozície pre ukladanie číslic.
+
+Keď príde pulz `btn_compare = 1`:
+- aktivuje sa `compare_en`
+- tým sa spustí porovnanie zadaného kódu
+
+Po dosiahnutí hodnoty `digit_index = 3` už index ďalej nerastie a zostáva na poslednej pozícii.
 
 # digit_registers
 
