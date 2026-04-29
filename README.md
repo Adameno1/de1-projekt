@@ -46,8 +46,26 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - ak sa nezhodujú, rozsvieti sa LED1
 
 # Simulacia
+- safe_fsm
 <img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
 
+- digit_registers 
+<img width="1114" height="471" alt="image" src="https://github.com/user-attachments/assets/d6eabe81-1501-49f3-9abe-ed933c85d713" />
+Táto simulácia ukazuje, ako funguje modul `digit_registers`.
+
+Na začiatku sa vykoná reset, takže všetky registre (`d0`, `d1`, `d2`, `d3`) sú nastavené na hodnotu `0`.
+
+Následne pri každom signáli `store_en = 1` sa uloží hodnota zo vstupu `digit_in` do registra podľa hodnoty `digit_index`.
+
+Hodnoty sa ukladajú postupne:
+- `digit_index = 0` → uloží sa `2` do `d0`
+- `digit_index = 1` → uloží sa `5` do `d1`
+- `digit_index = 2` → uloží sa `8` do `d2`
+- `digit_index = 3` → uloží sa `0` do `d3`
+
+Výsledkom je uložené číslo **2580**.
+
+Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
 # Tabulka vstupov a výstupov
 
