@@ -9,7 +9,13 @@ Výsledok je indikovaný pomocou LED diód a zadaný kód je zobrazený na sedem
 # Doska
 Nexys A7-50T
 
-# Cieľ projektu
+<img width="526" height="424" alt="image" src="https://github.com/user-attachments/assets/c4291861-f215-432d-93a3-01f10d5d628c" />
+
+
+# Bloková schéma
+
+<img width="1203" height="464" alt="image" src="https://github.com/user-attachments/assets/40fd6e9b-adf6-498d-9d02-fb088231f40b" />
+
 ## Správanie systému
 
 ### Po resete (BTNU)
@@ -50,32 +56,7 @@ Ak je kód nesprávny:
 - rozsvieti sa červená LED `LED16_R`
 - zelená LED zostane zhasnutá
 - blikanie displeja sa vypne
-# Bloková schéma
 
-<img width="1203" height="464" alt="image" src="https://github.com/user-attachments/assets/40fd6e9b-adf6-498d-9d02-fb088231f40b" />
-
-- OK  -> LED0
-- ERR -> LED1
-
-- Správanie systému
-
-- Po resete:
-
-- systém vymaže všetky 4 pozície
-- index zadávania sa nastaví na prvú číslicu
-- LED OK a ERROR zhasnú
-
-- Po stlačení BTNC:
-
-- aktuálna hodnota SW3..0 sa uloží do ďalšej pozície
-- index sa posunie na ďalšiu číslicu
-- keď sú uložené všetky 4 číslice, ďalšie zadávanie sa ignoruje alebo čaká na compare
-
-- Po stlačení BTNR:
-
-- uložené 4 číslice sa porovnajú s tajným kódom
-- ak sa zhodujú, rozsvieti sa LED0
-- ak sa nezhodujú, rozsvieti sa LED1
 # Súbory projektu
 
 ## Sources
