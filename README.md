@@ -14,7 +14,7 @@ Nexys A7-50T
 
 # Bloková schéma
 
-<img width="1203" height="464" alt="image" src="https://github.com/user-attachments/assets/40fd6e9b-adf6-498d-9d02-fb088231f40b" />
+<img width="818" height="255" alt="image" src="https://github.com/user-attachments/assets/1c6c2bad-5290-436e-a615-173503ca059a" />
 
 ## Správanie systému
 
