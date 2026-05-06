@@ -95,6 +95,8 @@ Riadi postup zadávania číslic, posúvanie pozície a spustenie porovnania kó
 # Simulacia
 # safe_fsm
 
+### [safe_fsm_tb.vhd](./tesbench/safe_fsm_tb.vhd)
+
 <img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
 
 Táto simulácia ukazuje, ako funguje riadiaci modul `safe_fsm`.
@@ -117,6 +119,7 @@ Po dosiahnutí hodnoty `digit_index = 3` už index ďalej nerastie a zostáva na
 
 # digit_registers
 
+### [digit_registers_tb.vhd](./tesbench/digit_registers_tb.vhd)
 
 <img width="1114" height="471" alt="image" src="https://github.com/user-attachments/assets/d6eabe81-1501-49f3-9abe-ed933c85d713" />
 
@@ -137,7 +140,7 @@ Výsledkom je uložené číslo **2580**.
 
 Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
-#Code_compare
+# Code_compare
 
 ### [code_compare_tb.vhd](./tesbench/code_compare_tb.vhd)
 
