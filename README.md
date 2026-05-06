@@ -212,15 +212,17 @@ Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy s
 | blink_enable | interný signál | 1 | povolenie blikania aktuálnej číslice |
 
 # Hierarchia modulov
-- top_safe
-- safe_fsm
-- digit_registers
-- code_compare
-- display_driver
-- bin2seg
-- debouncer
-- clk_en
 
+top_safe  
+├── debounce (BTNC)  
+├── debounce (BTNR)  
+├── safe_fsm  
+├── digit_registers  
+├── code_compare  
+└── display_driver  
+    ├── clk_en  
+    └── bin2seg
+    
 # Rozdelenie úloh v tíme
 - Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
 - Gazovic – dátová časť, digit_registers, code_compare, definícia preset kódu, testbench pre porovnanie
