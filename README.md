@@ -125,17 +125,24 @@ Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy s
 
 # Tabulka vstupov a výstupov
 
-| Signál    |    Typ | Šírka | Funkcia                 |
-| --------- | -----: | ----: | ----------------------- |
-| CLK100MHZ |  input |     1 | systémový clock         |
-| BTNU      |  input |     1 | reset                   |
-| BTNC      |  input |     1 | uloženie číslice        |
-| BTNR      |  input |     1 | porovnanie kódu         |
-| SW        |  input |     4 | aktuálne zadaná číslica |
-| LED       | output |    16 | indikácia výsledku      |
-| AN        | output |     8 | výber číslice 7-seg     |
-| SEG       | output |     7 | segmenty                |
-| DP        | output |     1 | desatinná bodka         |
+| Signál | Typ | Šírka | Funkcia |
+|--------|------|--------|----------|
+| CLK100MHZ | input | 1 | hlavný 100 MHz clock |
+| BTNU | input | 1 | reset celého systému |
+| BTNC | input | 1 | uloženie aktuálnej číslice |
+| BTNR | input | 1 | porovnanie zadaného kódu |
+| SW | input | 4 | zadávanie 4-bitovej číslice |
+| LED16_G | output | 1 | signalizácia správneho kódu |
+| LED16_R | output | 1 | signalizácia nesprávneho kódu |
+| AN | output | 8 | výber aktívnej číslice 7-segmentového displeja |
+| SEG | output | 7 | segmenty 7-segmentového displeja |
+| DP | output | 1 | desatinná bodka displeja |
+| store_en | interný signál | 1 | povolenie zápisu číslice do registra |
+| compare_en | interný signál | 1 | spustenie porovnania kódu |
+| digit_index | interný signál | 2 | index aktuálne zadávanej číslice |
+| d0–d3 | interný signál | 4 × 4 | uložené číslice zadaného kódu |
+| display_data | interný signál | 16 | spojené dáta pre display driver |
+| blink_enable | interný signál | 1 | povolenie blikania aktuálnej číslice |
 
 # Hierarchia modulov
 - top_safe
