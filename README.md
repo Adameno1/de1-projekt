@@ -1,5 +1,5 @@
 # Digitálny trezor 
-
+sources/clk_en.vhd
 # Popis problému
 Tento projekt implementuje 4-ciferný digitálny trezor na FPGA.  
 Používateľ zadáva štyri desiatkové číslice pomocou prepínačov SW[3:0].  
