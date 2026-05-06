@@ -166,15 +166,16 @@ Simulácia zároveň potvrdzuje správnu činnosť:
 | DP        | output |     1 | desatinná bodka         |
 
 # Hierarchia modulov
-- top_safe
-- safe_fsm
-- digit_registers
-- code_compare
-- display_driver
-- bin2seg
-- debouncer
-- clk_en
 
+- top_safe
+  - debounce
+  - safe_fsm
+  - digit_registers
+  - code_compare
+  - display_driver
+    - clk_en
+    - bin2seg
+  
 # Rozdelenie úloh v tíme
 - Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
 - Gazovic – dátová časť, digit_registers, code_compare, definícia preset kódu, testbench pre porovnanie
