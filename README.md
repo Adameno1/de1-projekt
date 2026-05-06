@@ -24,6 +24,8 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 
 <img width="1418" height="439" alt="image" src="https://github.com/user-attachments/assets/6a19197f-e8d6-4616-8922-19c93c5dc5a6" />
 
+# Video
+[Video de1 projekt](https://youtu.be/J3Og28kZ9ew)
 ## Správanie systému
 
 ### Po resete (BTNU)
