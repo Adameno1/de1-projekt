@@ -242,5 +242,11 @@ Repozitár bude priebežne aktualizovaný počas každého cvičenia.
    - generovanie prvého bitstreamu
    - úprava repozitára 
 4. Cvičenie :
-   - Oprava 
+   - Oprava funkčnosti kódu. Zmenili sme LED diódy z led0 a led1 na led17 a led16, kvůli lepšiemu dizajnu a ľahšiemu pochopeniu
+   - Pridali sme user friendly funkcie ako blikanie práve vyberaného čísla
+   - úprava repozitára
 5. Cvičenie :
+   - opravili sme blikanie posledného čísla aj po potvrdení kódu
+   - práca s repozitárom
+   - prezentácia vyučujúcemu
+   
