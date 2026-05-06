@@ -220,8 +220,8 @@ top_safe
 ├── digit_registers  
 ├── code_compare  
 └── display_driver  
-    ├── clk_en  
-    └── bin2seg
+      ├── clk_en  
+      └── bin2seg
     
 # Rozdelenie úloh v tíme
 - Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
