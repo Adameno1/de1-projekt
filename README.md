@@ -125,7 +125,7 @@ Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy s
 
 # Tabulka vstupov a výstupov
 
-| Signál | Typ | Šírka | Funkcia |
+| #Signál | #Typ | #Šírka | #Funkcia |
 |--------|------|--------|----------|
 | CLK100MHZ | input | 1 | hlavný 100 MHz clock |
 | BTNU | input | 1 | reset celého systému |
