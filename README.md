@@ -137,6 +137,8 @@ Výsledkom je uložené číslo **2580**.
 
 Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
+#Code_compare
+
 ### [code_compare_tb.vhd](./tesbench/code_compare_tb.vhd)
 
 
