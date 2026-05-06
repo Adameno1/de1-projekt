@@ -25,28 +25,103 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - OK  -> LED0
 - ERR -> LED1
 
-- Správanie systému
+## Správanie systému
 
-- Po resete:
+### Po resete (BTNU)
 
-- systém vymaže všetky 4 pozície
-- index zadávania sa nastaví na prvú číslicu
-- LED OK a ERROR zhasnú
+- systém vymaže všetky 4 uložené číslice
+- aktuálna pozícia zadávania sa nastaví na prvú číslicu
+- zelená aj červená LED zhasnú
+- displej začne znova blikať na prvej pozícii
 
-- Po stlačení BTNC:
+---
 
-- aktuálna hodnota SW3..0 sa uloží do ďalšej pozície
-- index sa posunie na ďalšiu číslicu
-- keď sú uložené všetky 4 číslice, ďalšie zadávanie sa ignoruje alebo čaká na compare
+### Po stlačení BTNC
 
-- Po stlačení BTNR:
+- aktuálna hodnota zo switchov `SW[3:0]` sa uloží do aktuálnej pozície
+- index zadávania sa posunie na ďalšiu číslicu
+- aktuálne zadávaná číslica na displeji bliká
+- ostatné číslice svietia stabilne
 
-- uložené 4 číslice sa porovnajú s tajným kódom
-- ak sa zhodujú, rozsvieti sa LED0
-- ak sa nezhodujú, rozsvieti sa LED1
+Po zadaní všetkých 4 číslic:
+
+- ďalšie stláčanie BTNC už neposúva index
+- systém čaká na porovnanie kódu
+
+---
+
+### Po stlačení BTNR
+
+- uložené 4 číslice sa porovnajú s tajným kódom `2580`
+
+Ak je kód správny:
+
+- rozsvieti sa zelená LED `LED16_G`
+- červená LED zostane zhasnutá
+- blikanie displeja sa vypne
+
+Ak je kód nesprávny:
+
+- rozsvieti sa červená LED `LED16_R`
+- zelená LED zostane zhasnutá
+- blikanie displeja sa vypne
+
+# Súbory projektu
+
+## Sources
+
+### [bin2seg.vhd](./sources/bin2seg.vhd)
+Modul na prevod 4-bitovej binárnej hodnoty na signály pre 7-segmentový displej.  
+Princíp spočíva v dekódovaní čísiel 0–F na jednotlivé segmenty displeja.
+
+---
+
+### [clk_en.vhd](./sources/clk_en.vhd)
+Generátor clock enable signálu.  
+Používa sa na spomalenie určitých operácií, napríklad multiplexovania displeja alebo blikania číslic.
+
+---
+
+### [code_compare.vhd](./sources/code_compare.vhd)
+Modul na porovnanie zadaného kódu so správnym kódom.  
+Po prijatí signálu `compare_en` porovná uložené číslice s definovaným heslom a nastaví výstup `code_ok` alebo `code_err`.
+
+---
+
+### [debounce.vhd](./sources/debounce.vhd)
+Modul na odstránenie zákmitov mechanických tlačidiel.  
+Zabezpečuje, aby jedno stlačenie tlačidla vytvorilo iba jeden čistý impulz.
+
+---
+
+### [digit_register.vhd](./sources/digit_register.vhd)
+Register na ukladanie jednotlivých číslic zadávaného kódu.  
+Podľa aktuálneho indexu uloží číslicu zo switchov do príslušného registra.
+
+---
+
+### [display_driver.vhd](./sources/display_driver.vhd)
+Ovládač 7-segmentového displeja.  
+Zabezpečuje multiplexovanie číslic, dekódovanie segmentov a blikanie aktuálne zadávanej číslice.
+
+---
+
+### [nexys.xdc](./sources/nexys.xdc)
+Constraint súbor FPGA dosky Nexys A7.  
+Obsahuje mapovanie portov návrhu na fyzické piny FPGA dosky.
+
+---
+
+### [safe_fsm.vhd](./sources/safe_fsm.vhd)
+Hlavný riadiaci FSM modul projektu.  
+Riadi postup zadávania číslic, posúvanie pozície a spustenie porovnania kódu.
+
+---
 
 # Simulacia
-# safe_fsm
+# [safe_fsm.vhd](./sources/safe_fsm.vhd)
+
+# [safe_fsm_tb.vhd](./tesbench/safe_fsm_tb.vhd)
 
 <img width="901" height="298" alt="image" src="https://github.com/user-attachments/assets/83cdf571-2155-460c-8958-ae818764f375" />
 
@@ -68,8 +143,9 @@ Keď príde pulz `btn_compare = 1`:
 
 Po dosiahnutí hodnoty `digit_index = 3` už index ďalej nerastie a zostáva na poslednej pozícii.
 
-# digit_registers
+# [digit_register.vhd](./sources/digit_register.vhd)
 
+# [digit_registers_tb.vhd](./tesbench/digit_registers_tb.vhd)
 
 <img width="1114" height="471" alt="image" src="https://github.com/user-attachments/assets/d6eabe81-1501-49f3-9abe-ed933c85d713" />
 
@@ -90,7 +166,9 @@ Výsledkom je uložené číslo **2580**.
 
 Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
-# code_compare 
+# [code_compare.vhd](./sources/code_compare.vhd)
+
+# [code_compare_tb.vhd](./tesbench/code_compare_tb.vhd)
 
 <img width="1108" height="465" alt="image" src="https://github.com/user-attachments/assets/d641ba31-aa9c-4ead-835b-9167c1ac0c1d" />
 
@@ -122,8 +200,9 @@ Pri ďalšom pulze `compare_en = 1`:
 
 Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy späť na `0`.
 
-# display_driver 
+# [display_driver.vhd](./sources/display_driver.vhd) 
 
+# [display_driver_tb.vhd](./tesbench/display_driver_tb.vhd)
 <img width="1179" height="535" alt="image" src="https://github.com/user-attachments/assets/90ca30e9-57a4-4c7a-80be-3b728757150d" />
 
 Táto simulácia overuje správnu funkcionalitu modulu `display_driver`.
