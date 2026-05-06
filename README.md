@@ -122,6 +122,34 @@ Pri ďalšom pulze `compare_en = 1`:
 
 Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy späť na `0`.
 
+# display_driver 
+
+<img width="1179" height="535" alt="image" src="https://github.com/user-attachments/assets/90ca30e9-57a4-4c7a-80be-3b728757150d" />
+
+Táto simulácia overuje správnu funkcionalitu modulu `display_driver`.
+
+Modul:
+
+- multiplexuje jednotlivé číslice displeja
+- prepína aktívne anódy pomocou signálu `anode`
+- dekóduje číslice cez modul `bin2seg`
+- zabezpečuje blikanie aktuálne vybranej číslice
+
+Počas simulácie sa najskôr zobrazí hodnota:
+
+`2580`
+
+a následne:
+
+`4321`
+
+Simulácia zároveň potvrdzuje správnu činnosť:
+
+- multiplexovania displeja
+- dekódovania segmentov
+- prepínania číslic
+- logiky blikania
+
 
 # Tabulka vstupov a výstupov
 
