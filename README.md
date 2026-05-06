@@ -43,7 +43,55 @@ Implementovať jednoduchý digitálny kombinačný zámok s:
 - uložené 4 číslice sa porovnajú s tajným kódom
 - ak sa zhodujú, rozsvieti sa LED0
 - ak sa nezhodujú, rozsvieti sa LED1
+# Súbory projektu
 
+## Sources
+
+### [bin2seg.vhd](./sources/bin2seg.vhd)
+Modul na prevod 4-bitovej binárnej hodnoty na signály pre 7-segmentový displej.  
+Princíp spočíva v dekódovaní čísiel 0–F na jednotlivé segmenty displeja.
+
+---
+
+### [clk_en.vhd](./sources/clk_en.vhd)
+Generátor clock enable signálu.  
+Používa sa na spomalenie určitých operácií, napríklad multiplexovania displeja alebo blikania číslic.
+
+---
+
+### [code_compare.vhd](./sources/code_compare.vhd)
+Modul na porovnanie zadaného kódu so správnym kódom.  
+Po prijatí signálu `compare_en` porovná uložené číslice s definovaným heslom a nastaví výstup `code_ok` alebo `code_err`.
+
+---
+
+### [debounce.vhd](./sources/debounce.vhd)
+Modul na odstránenie zákmitov mechanických tlačidiel.  
+Zabezpečuje, aby jedno stlačenie tlačidla vytvorilo iba jeden čistý impulz.
+
+---
+
+### [digit_register.vhd](./sources/digit_register.vhd)
+Register na ukladanie jednotlivých číslic zadávaného kódu.  
+Podľa aktuálneho indexu uloží číslicu zo switchov do príslušného registra.
+
+---
+
+### [display_driver.vhd](./sources/display_driver.vhd)
+Ovládač 7-segmentového displeja.  
+Zabezpečuje multiplexovanie číslic, dekódovanie segmentov a blikanie aktuálne zadávanej číslice.
+
+---
+
+### [nexys.xdc](./sources/nexys.xdc)
+Constraint súbor FPGA dosky Nexys A7.  
+Obsahuje mapovanie portov návrhu na fyzické piny FPGA dosky.
+
+---
+
+### [safe_fsm.vhd](./sources/safe_fsm.vhd)
+Hlavný riadiaci FSM modul projektu.  
+Riadi postup zadávania číslic, posúvanie pozície a spustenie porovnania kódu.
 # Simulacia
 # safe_fsm
 
