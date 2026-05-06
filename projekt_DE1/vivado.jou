@@ -54,3 +54,44 @@ launch_simulation
 source tb_safe_fsm.tcl
 close_sim
 reset_project
+file mkdir C:/Users/brano/Documents/de1-projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/brano/Documents/de1-projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/display_driver_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/brano/Documents/de1-projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/display_driver_tb.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top display_driver_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cfg_tb_display_driver [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source cfg_tb_display_driver.tcl
+run 10 ms
+run 20 ms
+run all
+restart
+run 20 ms
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_display_driver [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_display_driver.tcl
+run 20 ms
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

@@ -892,3 +892,118 @@ setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_project", true);
 // Tcl Message: reset_project 
 // TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
 // HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:34:48 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 123 MB. Current time: 5/6/26, 4:35:28 PM CEST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 781 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5430 ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 4712ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2437 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2102 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8487 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1980 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6047 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4500 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 900 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 7552 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 13523 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8092 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5693 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6301 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 18019 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 11760 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8708 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2010 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5111 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 9209 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8288 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 14351 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 15222 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 12199 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 20142 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4423 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 12223 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 9494 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 22005 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8235 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8238 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 7009 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 9415 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1680 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8646 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 7536 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6276 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5797 ms to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1354 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4392 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5606 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8647 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5605 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8573 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4313 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 10425 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2027 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4434 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6691 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 18603 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 8613 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 10683 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 10084 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 11315 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 10022 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 7655 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 5380 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 6700 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 4450 ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 12823 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 10454 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 53977 ms. Increasing delay to 161931 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:37:05 PM CEST
+// Elapsed time: 196 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_safe(Behavioral) (top_safe.vhd)]", 6, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_safe(Behavioral) (top_safe.vhd)]", 6, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:37:45 PM CEST
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1082, 15); // cE (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor("top_safe.vhd", 34, 278); // ae (top_safe.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:38:26 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:39:06 PM CEST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 16 ms. Decreasing delay to 2016 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:39:52 PM CEST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4460 ms. Increasing delay to 13380 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 45 ms. Decreasing delay to 2045 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:40:34 PM CEST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2462 ms. Increasing delay to 7386 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 4:41:13 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:41:54 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 4:42:34 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:43:15 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:43:55 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:44:36 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:45:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:45:57 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:46:37 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:47:18 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:47:58 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:48:39 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 4:49:19 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:50:00 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:50:40 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 4:51:20 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:52:01 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:52:42 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:53:22 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 4:54:03 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:54:44 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:55:24 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:56:05 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:56:45 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:57:26 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:58:06 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:58:46 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 4:59:27 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 5:00:07 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 5:00:48 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 5:01:28 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 5:02:09 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 124 MB. Current time: 5/6/26, 5:02:49 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 5:03:30 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 5:04:11 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,325 MB. GUI used memory: 125 MB. Current time: 5/6/26, 5:04:51 PM CEST

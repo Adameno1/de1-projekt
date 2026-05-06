@@ -22,7 +22,8 @@ entity top_safe is
         -- Výstupy pre 7-segmentový displej
         AN        : out std_logic_vector(7 downto 0);
         SEG       : out std_logic_vector(6 downto 0);
-        DP        : out std_logic
+        DP        : out std_logic;
+        RELAY     : out std_logic
     );
 end top_safe;
 
@@ -209,11 +210,12 @@ begin
             seg          => SEG,
             anode        => AN
         );
-
+        
+        
+        RELAY <= not code_ok_s;
     -- Výstup na RGB LED
     LED16_G <= code_ok_s;   -- zelená = správny kód
     LED16_R <= code_err_s;  -- červená = zlý kód
-
     -- Desatinnú bodku nepoužívame, preto je vypnutá
     DP <= '1';
 
