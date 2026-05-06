@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed May  6 16:15:37 2026
+# Process ID         : 26316
+# Current directory  : C:/Users/brano/Documents/de1-projekt/projekt_DE1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent31484 C:\Users\brano\Documents\de1-projekt\projekt_DE1\projekt_DE1.xpr
+# Log file           : C:/Users/brano/Documents/de1-projekt/projekt_DE1/vivado.log
+# Journal file       : C:/Users/brano/Documents/de1-projekt/projekt_DE1\vivado.jou
+# Running On         : Brano
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 2818 MB
+# Total Virtual      : 19687 MB
+# Available Virtual  : 2028 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/brano/Documents/de1-projekt/projekt_DE1/projekt_DE1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+close_design
+launch_simulation
+source tb_code_compare.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cfg_tb_digit_registers [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source cfg_tb_digit_registers.tcl
+update_compile_order -fileset sim_1
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_safe_fsm [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source tb_safe_fsm.tcl
+close_sim
+reset_project
