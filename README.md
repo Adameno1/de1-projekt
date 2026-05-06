@@ -277,7 +277,15 @@ Repozitár bude priebežne aktualizovaný počas každého cvičenia.
    - spravili sme design sources pre code_compare, digit_register a safe_fsm
    - Posledným krokom ktorý sme spravili bolo, že sme vygenerovali ku každému design sources testbench ktorý sme následne upravili podľa potrieb 
 3. Cvičenie :
-   
+   - prvý krát sme generovali bitstream
+   - úprava repozitára
 4. Cvičenie :
-
+   - opravili sme funkčnosť kódu, aby čísla svietili správne
+   - upravili sme kód aby bol viac user friendly a to tak že číslo ktoré práve zadávame bliká
+   - zmenili sme LEDky ktoré svietia z led0 a led1 na LED16_R a LED16_G
+   - úprava repozitára
 5. Cvičenie :
+   - upravili sme kód aby posledné číslo prestalo blikať po potvrdení kódu
+   - pridali sme relé ktoré zopne keď zadáme správny kód
+   - natočili finálne video
+   - úprava repozitára
