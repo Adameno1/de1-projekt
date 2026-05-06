@@ -138,7 +138,7 @@ Výsledkom je uložené číslo **2580**.
 Hodnoty zostávajú uložené, kým nepríde nový zápis alebo reset.
 
 # code_compare 
-
+(./tesbench/code_compare_tb.vhd)
 <img width="1108" height="465" alt="image" src="https://github.com/user-attachments/assets/d641ba31-aa9c-4ead-835b-9167c1ac0c1d" />
 
 Táto simulácia ukazuje, ako funguje modul `code_compare`, ktorý porovnáva zadaný kód s uloženým správnym kódom.
