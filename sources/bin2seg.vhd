@@ -16,67 +16,39 @@
 -------------------------------------------------
 
 library ieee;
-    use ieee.std_logic_1164.all;
-
--------------------------------------------------
+use ieee.std_logic_1164.all;
 
 entity bin2seg is
     port (
-        bin : in  std_logic_vector(3 downto 0);  --! 4-bit hexadecimal input
-        seg : out std_logic_vector(6 downto 0)   --! {a,b,c,d,e,f,g} active-low outputs
+        bin : in  std_logic_vector(3 downto 0);
+        seg : out std_logic_vector(6 downto 0)
     );
 end entity bin2seg;
-
--------------------------------------------------
 
 architecture Behavioral of bin2seg is
 begin
 
-    --! This combinational process decodes binary input
-    --! `bin` into 7-segment display output `seg` for a
-    --! Common Anode configuration (active-low outputs).
-    --! The process is triggered whenever `bin` changes.
-
-    p_7seg_decoder : process (bin) is
+    process(bin)
     begin
         case bin is
-            when x"0" =>
-                seg <= b"000_0001";
-            when x"1" =>
-                seg <= b"100_1111";
-            when x"2" =>
-                seg <= b"001_0010";
-            when x"3" =>
-                seg <= b"000_0110";
-            when x"4" =>
-                seg <= b"100_1100";
-            when x"5" =>
-                seg <= b"010_0100";
-            when x"6" =>
-                seg <= b"010_0000";
-            when x"7" =>
-                seg <= b"000_1111";
-            when x"8" =>
-                seg <= b"000_0000";
-            when x"9" =>
-                seg <= b"000_0100";
-            when x"A" =>
-                seg <= b"000_1000";
-            when x"b" =>
-                seg <= b"110_0000";
-            when x"C" =>
-                seg <= b"011_0001";
-            when x"d" =>
-                seg <= b"100_0010";
-            when x"E" =>
-                seg <= b"011_0000";
-            when x"F" =>
-                seg <= b"011_1000";
-
-            -- Default case (e.g., for undefined values)
-            when others =>
-                seg <= b"111_1111";  -- All segments off
+            when x"0" => seg <= "1000000"; -- 0
+            when x"1" => seg <= "1111001"; -- 1
+            when x"2" => seg <= "0100100"; -- 2
+            when x"3" => seg <= "0110000"; -- 3
+            when x"4" => seg <= "0011001"; -- 4
+            when x"5" => seg <= "0010010"; -- 5
+            when x"6" => seg <= "0000010"; -- 6
+            when x"7" => seg <= "1111000"; -- 7
+            when x"8" => seg <= "0000000"; -- 8
+            when x"9" => seg <= "0010000"; -- 9
+            when x"A" => seg <= "0001000"; -- A
+            when x"b" => seg <= "0000011"; -- b
+            when x"C" => seg <= "1000110"; -- C
+            when x"d" => seg <= "0100001"; -- d
+            when x"E" => seg <= "0000110"; -- E
+            when x"F" => seg <= "0001110"; -- F
+            when others => seg <= "1111111"; -- off
         end case;
-    end process p_7seg_decoder;
+    end process;
 
 end Behavioral;

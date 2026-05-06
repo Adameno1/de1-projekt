@@ -31,9 +31,9 @@ architecture tb of tb_safe_fsm is
     signal compare_en  : std_logic;
     signal digit_index : std_logic_vector(1 downto 0);
 
-    constant TbPeriod  : time := 10 ns;
-    signal TbClock     : std_logic := '0';
-    signal TbSimEnded  : std_logic := '0';
+    constant TbPeriod : time := 10 ns;
+    signal TbClock    : std_logic := '0';
+    signal TbSimEnded : std_logic := '0';
 
 begin
 
@@ -48,53 +48,51 @@ begin
             digit_index => digit_index
         );
 
-    
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
     clk <= TbClock;
 
     stimuli : process
     begin
-       
-        rst         <= '0';
-        btn_store   <= '0';
-        btn_compare <= '0';
-
-        
-        rst <= '1';
-        wait for 3 * TbPeriod;
         rst <= '0';
-        wait for 2 * TbPeriod;
-
-        
-        btn_store <= '1';
-        wait for TbPeriod;
         btn_store <= '0';
-        wait for 2 * TbPeriod;
-
-     
-        btn_store <= '1';
-        wait for TbPeriod;
-        btn_store <= '0';
-        wait for 2 * TbPeriod;
-
-  
-        btn_store <= '1';
-        wait for TbPeriod;
-        btn_store <= '0';
-        wait for 2 * TbPeriod;
-
-  
-        btn_store <= '1';
-        wait for TbPeriod;
-        btn_store <= '0';
-        wait for 2 * TbPeriod;
-
-        btn_compare <= '1';
-        wait for TbPeriod;
         btn_compare <= '0';
-        wait for 4 * TbPeriod;
 
-       
+        -- reset
+        rst <= '1';
+        wait for 30 ns;
+        rst <= '0';
+        wait for 20 ns;
+
+        -- 1. store
+        btn_store <= '1';
+        wait for 10 ns;
+        btn_store <= '0';
+        wait for 20 ns;
+
+        -- 2. store
+        btn_store <= '1';
+        wait for 10 ns;
+        btn_store <= '0';
+        wait for 20 ns;
+
+        -- 3. store
+        btn_store <= '1';
+        wait for 10 ns;
+        btn_store <= '0';
+        wait for 20 ns;
+
+        -- 4. store
+        btn_store <= '1';
+        wait for 10 ns;
+        btn_store <= '0';
+        wait for 20 ns;
+
+        -- compare
+        btn_compare <= '1';
+        wait for 10 ns;
+        btn_compare <= '0';
+        wait for 20 ns;
+
         TbSimEnded <= '1';
         wait;
     end process;
