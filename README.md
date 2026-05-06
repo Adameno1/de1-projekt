@@ -213,15 +213,14 @@ Na konci simulácie sa môže znova aktivovať reset, ktorý vynuluje výstupy s
 
 # Hierarchia modulov
 
-top_safe  
-├── debounce (BTNC)  
-├── debounce (BTNR)  
-├── safe_fsm  
-├── digit_registers  
-├── code_compare  
-└── display_driver  
-      ├── clk_en  
-      └── bin2seg
+- top_safe
+  - debounce
+  - safe_fsm
+  - digit_registers
+  - code_compare
+  - display_driver
+    - clk_en
+    - bin2seg
     
 # Rozdelenie úloh v tíme
 - Petrik – vstupy a riadenie, obsluha tlačidiel, časť safe_fsm
