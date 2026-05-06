@@ -10,13 +10,46 @@ Výsledok je indikovaný pomocou LED diód a zadaný kód je zobrazený na sedem
 Nexys A7-50T
 
 # Cieľ projektu
-Implementovať jednoduchý digitálny kombinačný zámok s:
-- zadávaním 4-ciferného kódu
-- ukladaním zadaných číslic
-- porovnaním s prednastaveným kódom
-- vizuálnou indikáciou úspechu/neúspechu
-- výstupom na sedemsegmentový displej
+## Správanie systému
 
+### Po resete (BTNU)
+
+- systém vymaže všetky 4 uložené číslice
+- aktuálna pozícia zadávania sa nastaví na prvú číslicu
+- zelená aj červená LED zhasnú
+- displej začne znova blikať na prvej pozícii
+
+---
+
+### Po stlačení BTNC
+
+- aktuálna hodnota zo switchov `SW[3:0]` sa uloží do aktuálnej pozície
+- index zadávania sa posunie na ďalšiu číslicu
+- aktuálne zadávaná číslica na displeji bliká
+- ostatné číslice svietia stabilne
+
+Po zadaní všetkých 4 číslic:
+
+- ďalšie stláčanie BTNC už neposúva index
+- systém čaká na porovnanie kódu
+
+---
+
+### Po stlačení BTNR
+
+- uložené 4 číslice sa porovnajú s tajným kódom `2580`
+
+Ak je kód správny:
+
+- rozsvieti sa zelená LED `LED16_G`
+- červená LED zostane zhasnutá
+- blikanie displeja sa vypne
+
+Ak je kód nesprávny:
+
+- rozsvieti sa červená LED `LED16_R`
+- zelená LED zostane zhasnutá
+- blikanie displeja sa vypne
 # Bloková schéma
 
 <img width="1203" height="464" alt="image" src="https://github.com/user-attachments/assets/40fd6e9b-adf6-498d-9d02-fb088231f40b" />
